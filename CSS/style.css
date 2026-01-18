@@ -348,6 +348,108 @@ body {
   color: #faff00;
 }
 
+/* --- Trainers Section --- */
+.trainers-section {
+    padding: 80px 0;
+    color: #ffffff;
+}
+
+/* --- Heading Styles --- */
+.section-heading {
+    color: #ffffff;
+    font-family: 'Inter', sans-serif; 
+    font-weight: 700;
+    margin-bottom: 50px; 
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: 2.5rem; 
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Grid Layout: Mobile-first */
+.trainers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 24px; /* Spacing between cards */
+}
+
+/* Trainer Card Styling */
+.trainer-card {
+    background-color: #111111; /* Slightly lighter black for card bg */
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trainer-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 10px 30px rgba(250, 255, 0, 0.1); /* Subtle yellow glow */
+}
+
+/* Image Container */
+.trainer-image {
+    width: 100%;
+    aspect-ratio: 4 / 5; /* Maintains professional portrait ratio */
+    overflow: hidden;
+}
+
+.trainer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images don't stretch */
+}
+
+/* Info Section */
+.trainer-info {
+    padding: 25px 15px;
+    text-align: center;
+}
+
+.trainer-info h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Social Media Icons */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #444444; /* Circle border from image */
+    border-radius: 50%;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Hover effect on icons using the theme's yellow accent */
+.social-links a:hover {
+    background-color: #FAFF00; 
+    border-color: #FAFF00;
+    color: #000000;
+}
+
+
+
+
 /* ===================== */
 /* RESPONSIVE BREAKPOINTS */
 /* ===================== */
@@ -357,6 +459,7 @@ body {
   .membership-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  
 }
 
 @media (max-width: 992px) {
@@ -479,6 +582,11 @@ body {
     .about-text, .about-image {
         flex: 1;
     }
+
+    /* trainers section */
+    .trainers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 480px) {
@@ -498,4 +606,8 @@ body {
   .logo img {
     width: 130px;
   }
+  /* trainers section */
+    .trainers-grid {
+        grid-template-columns: 1fr;
+    }
 }

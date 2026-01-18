@@ -51,3 +51,38 @@ prevBtn.addEventListener("click", () => {
     currentIndex = (currentIndex - 1 + slides.length) % slides.length;
     updateSlider(currentIndex);
 });
+
+
+
+// --- Animation Logic for Trainer Cards (Scroll-in effect) ---
+const initScrollAnimations = () => {
+    const trainerCards = document.querySelectorAll('.trainer-card');
+    const observerOptions = {
+        threshold: 0.15, 
+        rootMargin: "0px 0px -50px 0px" 
+    };
+
+    const revealOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const card = entry.target;
+                card.style.opacity = "1";
+                card.style.transform = "translateY(0)";
+                observer.unobserve(card);
+            }
+        });
+    }, observerOptions);
+
+    trainerCards.forEach(card => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(30px)";
+        card.style.transition = "opacity 0.8s ease-out, transform 0.8s ease-out";
+        revealOnScroll.observe(card);
+    });
+};
+
+// Initialize all functions after DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    initScrollAnimations();
+    initSocialInteractions();
+});
