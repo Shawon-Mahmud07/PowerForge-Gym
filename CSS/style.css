@@ -250,39 +250,9 @@ body {
   background: #cfd200;
 }
 
+
+
 /*-----------------About us Section------------------- */
-/* .about {
-  background-color: #000;
-  color: #fff;
-  padding: 80px 0;
-}
-
-.about-wrapper {
-    display: flex;
-    flex-direction: row; 
-    align-items: center; 
-    justify-content: space-between; 
-    margin-bottom: 30px;
-}
-
-.about-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  font-weight: 700;
-}
-
-.about-text p {
-  color: #b3b3b3;
-  margin-bottom: 20px;
-  font-size: 1.2rem;
-  max-width: 550px;
-}
-
-.about-image img {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-} */
  .about {
   background-color: #000;
   color: #fff;
@@ -291,7 +261,7 @@ body {
 
 .about-wrapper {
   display: flex;
-  gap: 40px; /* Space between text and image */
+  gap: 40px;
   align-items: center; 
   justify-content: space-between; 
 }
@@ -375,7 +345,7 @@ body {
 }
 
 .dot.active {
-  background: #faff00; /* Yellow accent from image */
+  background: #faff00; 
 }
 
 .arrows {
@@ -416,37 +386,36 @@ body {
     text-align: center;
 }
 
-/* Grid Layout: Mobile-first */
 .trainers-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
-    gap: 24px; /* Spacing between cards */
+    gap: 24px;
 }
 
 /* Trainer Card Styling */
 .trainer-card {
-    background-color: #111111; /* Slightly lighter black for card bg */
+    background-color: #111111; 
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .trainer-card:hover {
-    transform: translateY(-10px); /* Lift effect on hover */
-    box-shadow: 0 10px 30px rgba(250, 255, 0, 0.1); /* Subtle yellow glow */
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 30px rgba(250, 255, 0, 0.1); 
 }
 
 /* Image Container */
 .trainer-image {
     width: 100%;
-    aspect-ratio: 4 / 5; /* Maintains professional portrait ratio */
+    aspect-ratio: 4 / 5; 
     overflow: hidden;
 }
 
 .trainer-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures images don't stretch */
+    object-fit: cover; 
 }
 
 /* Info Section */
@@ -487,13 +456,89 @@ body {
     height: 18px;
 }
 
-/* Hover effect on icons using the theme's yellow accent */
 .social-links a:hover {
     background-color: #FAFF00; 
     border-color: #FAFF00;
     color: #000000;
 }
 
+/* ----------------------- Footer Base Styles ------------------------ */
+.site-footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 60px 0;
+  
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-col {
+  flex: 1;
+}
+
+/* --- Content Styling --- */
+.footer-col h3 {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.footer-col p {
+  padding-top: 5px;
+  color: #b3b3b3;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  max-width: 300px;
+}
+
+/* --- Interactive Elements --- */
+.contact-links {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-links li {
+  margin-bottom: 15px;
+}
+
+.contact-links a {
+  color: #b3b3b3;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-links a:hover {
+  color: #e2fb05;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #444;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #faff00;
+  color: #000;
+  border-color: #faff00;
+}
 
 
 
@@ -501,7 +546,6 @@ body {
 /* RESPONSIVE BREAKPOINTS */
 /* ===================== */
 
-/* Tablet (2 columns) */
 @media (max-width: 1024px) {
   .membership-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -521,8 +565,6 @@ body {
   .hero-content, .hero-img {
     width: 100%;
   }
-
-
 
   .Choose-grid {
     grid-template-columns: 1fr;
@@ -551,12 +593,17 @@ body {
   .about-wrapper {
     gap: 20px;
   }
+
+/* footer section */
+.footer-wrapper {
+    flex-wrap: wrap;
+  }
+  .footer-col {
+    flex: 1 1 45%;
+  }
 }
 
 @media (max-width: 768px) {
-  /* .container {
-    padding: 0;
-  } */
   header {
     padding: 10px 20px;
   }
@@ -627,22 +674,22 @@ body {
 /* ---------About us section ---------------*/
 
   .about {
-    padding: 50px 0; /* Reduce section padding on mobile */
+    padding: 50px 0; 
   }
 
   .about-wrapper {
-    flex-direction: column; /* Stacks text on top of image */
+    flex-direction: column; 
     text-align: left;
   }
 
   .about-text p {
-    max-width: 100%; /* Allows text to fill width */
+    max-width: 100%; 
     font-size: 1rem;
   }
 
   .about-image {
     width: 100%;
-    height: 300px; /* Slightly smaller height for mobile screens */
+    height: 300px; 
     margin-top: 20px;
   }
   
@@ -656,6 +703,21 @@ body {
     .trainers-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    /* ---------------Footer section-----------*/
+    .footer-wrapper {
+    flex-direction: column; 
+    gap: 50px;
+    text-align: center;
+  }
+
+  .footer-col p {
+    margin: 0 auto 10px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -687,13 +749,6 @@ body {
   );
   object-fit: cover;
 }
-
-
-
-
-
-
-
 
   .logo img {
     width: 130px;
