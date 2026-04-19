@@ -6,7 +6,7 @@ A modern, responsive gym website built with pure HTML, CSS, and JavaScript — n
 
 ## 🌐 Live Preview
 
-> Open `index.html` in your browser to view the project locally.
+🔗 **[https://power-forge-gym.netlify.app/](https://power-forge-gym.netlify.app/)**
 
 ---
 
