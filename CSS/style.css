@@ -10,9 +10,15 @@ html,
 body {
   width: 100%;
   overflow-x: hidden;
+  overflow-y: visible; 
+  height: auto;
   background: #000;
   color: #fff;
   font-family: Arial, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; 
 }
 
 .container {
@@ -22,6 +28,16 @@ body {
 }
 
 /* HEADER */
+header {
+  position: -webkit-sticky; /* Support for Safari */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #000;
+  /* Ensure it has a height */
+  height: auto; 
+}
 .nav-div {
   display: flex;
   align-items: center;
@@ -639,6 +655,7 @@ body {
     text-decoration: underline;
   }
 
+
   .nav-links.active {
     display: flex;
   }
@@ -719,6 +736,8 @@ body {
     justify-content: center;
   }
 }
+
+
 
 @media (max-width: 480px) {
   .hero-content h1 {

@@ -6,6 +6,22 @@ navToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
+
+// the header to become smaller or change color when the user scrolls down
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  if (window.scrollY > 50) {
+    header.style.padding = "10px 0";
+    header.style.background = "rgba(0, 0, 0, 0.95)"; 
+    header.style.padding = "15px 0";
+    header.style.background = "#000";
+  }
+});
+
+
+
+
+
 //About us-Slider dots interaction
 // Select all necessary elements
 const slides = document.querySelectorAll(".slide");
@@ -80,3 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollAnimations();
   initSocialInteractions();
 });
+
+
+
+
+
